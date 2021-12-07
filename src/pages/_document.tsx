@@ -19,7 +19,7 @@ class MyDocument extends Document {
           <link rel='alternate icon' href='/favicon.ico' />
           <meta name='theme-color' content='#ffffff'></meta>
         </Head>
-        <body>
+        <body className='transition-colors duration-200 bg-white dark:bg-dark-mode'>
           <Main />
           <NextScript />
         </body>

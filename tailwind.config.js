@@ -15,6 +15,7 @@ module.exports = {
         sans: ['Poppins', ...fontFamily.sans],
       },
       colors: {
+        'dark-mode': '#1A202C',
         subtext: '#757575',
         accent: '#3c8bd6',
         'accent-light': '#5FA0DD',
