@@ -1,13 +1,11 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import Navbar from '../components/Navbar';
 import MainLayout from '../layouts/MainLayout';
+import Landing from '@/components/Landing';
 
 const Home: NextPage = () => {
   return (
     <MainLayout>
-      <h1>Faisal Jamil Portfolio</h1>
+      <Landing />
     </MainLayout>
   );
 };
