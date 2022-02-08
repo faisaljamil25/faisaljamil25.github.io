@@ -7,9 +7,7 @@ interface Props {
 const MainLayout: React.FC<Props> = ({ children }) => {
   return (
     <div className='flex flex-col min-h-screen'>
-      <div className='mx-10 my-5'>
-        <Navbar />
-      </div>
+      <Navbar />
       <div className='grid grid-cols-1 px-5 lg:px-28 justify-items-center'>
         <main className='grid items-center grid-cols-1 max-w-[1200px] w-full'>
           {children}
