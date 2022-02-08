@@ -4,7 +4,7 @@ import { HIGHLIGHT_COLORS } from '@/lib/colors';
 import { useIsFontReady } from '@/hooks/useIsFontReady';
 import { shuffleArray } from '@/lib/shuffleArray';
 
-const Landing = () => {
+const Landing: React.FC = () => {
   const isFontReady = useIsFontReady();
   const [colors, setColors] = useState<string[]>([]);
 

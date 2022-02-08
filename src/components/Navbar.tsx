@@ -5,7 +5,7 @@ import { HiSun } from 'react-icons/hi';
 import { useIsMounted } from '@/hooks/useIsMounted';
 import ThemeToggleButton from '@/components/ThemeToggleButton';
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const isMounted = useIsMounted();
 
