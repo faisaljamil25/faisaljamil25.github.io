@@ -4,12 +4,16 @@ interface Props {
   children: React.ReactNode;
 }
 
-const MainLayout = ({ children }: Props) => {
+const MainLayout: React.FC<Props> = ({ children }) => {
   return (
-    <div>
-      {/* <Navbar /> */}
-      <div>
-        <main>{children}</main>
+    <div className='flex flex-col min-h-screen'>
+      <div className='mx-10 my-5'>
+        <Navbar />
+      </div>
+      <div className='grid grid-cols-1 px-5 lg:px-28 justify-items-center'>
+        <main className='grid items-center grid-cols-1 max-w-[1200px] w-full'>
+          {children}
+        </main>
       </div>
     </div>
   );
