@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 interface Props {
@@ -13,6 +14,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
           {children}
         </main>
       </div>
+      <Footer />
     </div>
   );
 };

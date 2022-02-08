@@ -16,6 +16,7 @@ module.exports = {
       },
       colors: {
         'dark-mode': '#1A202C',
+        'dark-mode-light': '#262e40',
         subtext: '#757575',
         accent: '#3c8bd6',
         'accent-light': '#5FA0DD',
