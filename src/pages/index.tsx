@@ -3,6 +3,7 @@ import MainLayout from '../layouts/MainLayout';
 import Landing from '@/components/Landing';
 import Projects from '@/components/Projects';
 import SocialLinks from '@/components/SocialLinks';
+import Contact from '@/components/Contact';
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +11,7 @@ const Home: NextPage = () => {
       <Landing />
       <Projects />
       <SocialLinks />
+      <Contact />
     </MainLayout>
   );
 };
