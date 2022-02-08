@@ -16,7 +16,7 @@ const Landing: React.FC = () => {
     <section className='flex items-center justify-center min-h-screen'>
       <RoughNotationGroup show={isFontReady}>
         <div className='mb-48 space-y-3'>
-          <h1 className='heading text-5xl dark:text-white'>
+          <h1 className='heading text-4xl lg:text-6xl dark:text-white leading-tight'>
             Hey, I&apos;m{' '}
             <span className='whitespace-nowrap'>
               <RoughNotation
@@ -30,13 +30,23 @@ const Landing: React.FC = () => {
               </RoughNotation>
             </span>
           </h1>
-          <h2 className='heading main text-lg text-gray-400'>
+          <h2 className='heading main text-xl text-gray-400 leading-loose'>
             I like making cool stuff
           </h2>
-          <p className='max-w-2xl pt-3 md:text-xl sm:text-lg dark:text-white'>
+          <p className='max-w-2xl md:text-xl sm:text-lg dark:text-white'>
             I’m a full stack web developer experienced in React, Nextjs,
             Typescript, Nodejs and Express.
           </p>
+          <div>
+            <a
+              href='https://drive.google.com/drive/u/0/folders/13W6dZM69-PXQQO8HbeszcvOjN0DmBWyh'
+              target='_'
+            >
+              <button className='button mt-5' type='button'>
+                Resume
+              </button>
+            </a>
+          </div>
         </div>
       </RoughNotationGroup>
     </section>
