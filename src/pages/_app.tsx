@@ -3,9 +3,9 @@ import { ThemeProvider } from 'next-themes';
 import { DefaultSeo } from 'next-seo';
 import '@/styles/globals.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
-    <ThemeProvider attribute='class'>
+    <ThemeProvider attribute='class' defaultTheme='dark'>
       <DefaultSeo
         title='Faisal Jamil'
         description='Fullstack Web Developer'
@@ -19,6 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </ThemeProvider>
   );
-}
+};
 
 export default MyApp;

@@ -5,7 +5,7 @@ export const projects = [
     description:
       'A web application platform to conduct online quizzing contests built with Next.JS, TypeScript & Express.js',
     imgSrc: '/chimerax.png',
-    liveLink: 'https://chimerax.istemanit.in/',
+    liveLink: 'https://chimerax22-ui.vercel.app/',
     repoLink: 'https://github.com/ISTE-SC-MANIT/chimerax22-ui',
   },
   {
