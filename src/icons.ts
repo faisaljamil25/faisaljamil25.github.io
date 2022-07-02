@@ -48,7 +48,7 @@ const tailwind = {
 };
 const mongodb = {
   path: '/icons/mongodb.svg',
-  name: 'MongoDb',
+  name: 'MongoDB',
 };
 const firebase = {
   path: '/icons/firebase.svg',
@@ -65,6 +65,10 @@ const solidity = {
 const ethereum = {
   path: '/icons/ethereum.svg',
   name: 'Ethereum',
+};
+const sass = {
+  path: '/icons/sass.svg',
+  name: 'Sass',
 };
 
 export default {
@@ -85,4 +89,5 @@ export default {
   postman,
   solidity,
   ethereum,
+  sass,
 };

@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
       <nav className='flex items-center justify-between flex-1 max-w-[1920px]'>
         <div>
           <h4 className='text-current text-black no-underline dark:text-white hover:text-current'>
-            <span className='font-bold '>Faisal Jamil</span>
+            <span className='font-bold text-2xl'>FJ.</span>
           </h4>
         </div>
         <div>

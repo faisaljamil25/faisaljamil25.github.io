@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import { FiGithub } from 'react-icons/fi';
 import { RiLinkedinLine } from 'react-icons/ri';
 import SectionTitle from './SectionTitle';
 
-const Contact: React.FC = () => {
+const Contact: React.FC<{ contactRef: RefObject<HTMLElement> }> = ({
+  contactRef,
+}) => {
   return (
-    <section className='pt-10'>
+    <section className='pt-10' ref={contactRef}>
       <SectionTitle
         subtitle={`If you have a question or just want to say hi, don’t hesitate to reach out!`}
       >

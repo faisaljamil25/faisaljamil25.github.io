@@ -9,7 +9,9 @@ const Skills = () => {
   const { theme } = useTheme();
   return (
     <section>
-      <SectionTitle subtitle="Technologies I've worked on">Skills</SectionTitle>
+      <SectionTitle subtitle="Technologies I've worked on.">
+        Skills
+      </SectionTitle>
       <div className='px-6 2xl:px-0 w-full flex justify-center items-center py-10 md:py-14 '>
         <div className='mx-auto container'>
           <div>
@@ -26,6 +28,7 @@ const Skills = () => {
                 icons.firebase,
                 icons.html,
                 icons.css,
+                icons.sass,
                 icons.js,
                 icons.git,
                 icons.figma,
@@ -46,7 +49,7 @@ const Skills = () => {
                       height={50}
                       alt='social'
                       className={`cursor-pointer ${
-                        theme === 'dark' &&
+                        theme === 'light' &&
                         (icon === icons.nextjs ||
                           icon === icons.express ||
                           icon === icons.solidity)

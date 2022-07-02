@@ -4,7 +4,9 @@ import { HIGHLIGHT_COLORS } from '@/lib/colors';
 import { useIsFontReady } from '@/hooks/useIsFontReady';
 import { shuffleArray } from '@/lib/shuffleArray';
 
-const Landing: React.FC = () => {
+const Landing: React.FC<{ scrollToContact: () => void }> = ({
+  scrollToContact,
+}) => {
   const isFontReady = useIsFontReady();
   const [colors, setColors] = useState<string[]>([]);
 
@@ -38,14 +40,13 @@ const Landing: React.FC = () => {
             Typescript, Nodejs and Express.
           </p>
           <div>
-            <a
-              href='https://drive.google.com/drive/u/0/folders/13W6dZM69-PXQQO8HbeszcvOjN0DmBWyh'
-              target='_'
+            <button
+              className='button mt-5'
+              type='button'
+              onClick={scrollToContact}
             >
-              <button className='button mt-5' type='button'>
-                Resume
-              </button>
-            </a>
+              Get In Touch
+            </button>
           </div>
         </div>
       </RoughNotationGroup>
