@@ -25,7 +25,7 @@ export const projects = [
     description:
       'Megatreopuz is secure, scalable and powerful cryptic hunt platform ',
     techStack:
-      'Next.js | TypeScript | Material UI | Firebase | Express.js | TypeGraphQL | Typegoose | Apollo Client | Go',
+      'Next.js | TypeScript | Material UI | Firebase | Express.js | MongoDB | GraphQL | Apollo Client | Go',
     imgSrc: '/mega1.png',
     liveLink: 'https://github.com/ISTE-SC-MANIT/megatreopuz-ui',
     repoLink: 'https://github.com/ISTE-SC-MANIT/megatreopuz-ui',
