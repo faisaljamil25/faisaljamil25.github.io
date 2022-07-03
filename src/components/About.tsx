@@ -1,10 +1,30 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import SectionTitle from './SectionTitle';
+import { scrollAnimation } from '@/lib/animation';
 
 const About: React.FC = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      control.start('visible');
+    }
+  }, [control, inView]);
+
   return (
-    <section>
+    <motion.section
+      className='projects'
+      ref={ref}
+      variants={scrollAnimation}
+      initial='hidden'
+      animate={control}
+    >
       <SectionTitle subtitle=''>About Me</SectionTitle>
       <div className='px-6 2xl:px-0 w-full flex justify-center items-center py-4 '>
         <div className='mx-auto container'>
@@ -47,7 +67,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,16 +1,36 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import SectionTitle from './SectionTitle';
 import icons from '../icons';
 import { Tooltip } from './Tooltip';
+import { scrollAnimation } from '@/lib/animation';
 
 const Skills = () => {
   const { theme } = useTheme();
+  const control = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      control.start('visible');
+    }
+  }, [control, inView]);
+
   return (
-    <section>
+    <motion.section
+      className='projects'
+      ref={ref}
+      variants={scrollAnimation}
+      initial='hidden'
+      animate={control}
+    >
       <SectionTitle subtitle="Technologies I've worked on">Skills</SectionTitle>
-      <div className='px-6 2xl:px-0 w-full flex justify-center items-center py-10 md:py-14 '>
+      <div className='px-6 2xl:px-0 w-full flex justify-center items-center py-10 pb-16'>
         <div className='mx-auto container'>
           <div>
             <div className='container mx-auto grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12 pt-6 gap-10 justify-center'>
@@ -63,7 +83,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

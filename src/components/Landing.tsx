@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { RoughNotationGroup, RoughNotation } from 'react-rough-notation';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { HIGHLIGHT_COLORS } from '@/lib/colors';
 import { useIsFontReady } from '@/hooks/useIsFontReady';
 import { shuffleArray } from '@/lib/shuffleArray';
+
+const scrollAnimation = {
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
+  hidden: { opacity: 0, scale: 1 },
+};
 
 const Landing: React.FC<{ scrollToContact: () => void }> = ({
   scrollToContact,
@@ -10,12 +17,29 @@ const Landing: React.FC<{ scrollToContact: () => void }> = ({
   const isFontReady = useIsFontReady();
   const [colors, setColors] = useState<string[]>([]);
 
+  const control = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      control.start('visible');
+    }
+  }, [control, inView]);
+
   useEffect(() => {
     setColors(shuffleArray(HIGHLIGHT_COLORS));
   }, []);
 
   return (
-    <section className='flex items-center justify-center min-h-screen'>
+    <motion.section
+      className='flex items-center justify-center min-h-screen'
+      ref={ref}
+      variants={scrollAnimation}
+      initial='hidden'
+      animate={control}
+    >
       <RoughNotationGroup show={isFontReady}>
         <div className='mb-48 space-y-3'>
           <h1 className='heading text-4xl lg:text-6xl dark:text-white leading-tight'>
@@ -50,7 +74,7 @@ const Landing: React.FC<{ scrollToContact: () => void }> = ({
           </div>
         </div>
       </RoughNotationGroup>
-    </section>
+    </motion.section>
   );
 };
 
