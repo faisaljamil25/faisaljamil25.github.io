@@ -1,3 +1,4 @@
+import { useTheme } from 'next-themes';
 import React from 'react';
 import CardLink from './CardLink';
 import Modal from './Modal';
@@ -19,6 +20,7 @@ const ProjectCard: React.FC<Props> = ({
   liveLink,
   repoLink,
 }: Props) => {
+  const { theme } = useTheme();
   const [imageModal, setImageModal] = React.useState<boolean>(false);
   return (
     <>
@@ -30,7 +32,13 @@ const ProjectCard: React.FC<Props> = ({
         />
         <div className='pt-8'>
           <h3 className='text-3xl font-medium dark:text-white'>{title}</h3>
-          <p className='pt-2 leading-7 text-md text-sky-300'>{techStack}</p>
+          <p
+            className={`pt-2 leading-7 text-md ${
+              theme == 'light' ? 'text-sky-600' : 'text-sky-300'
+            }`}
+          >
+            {techStack}
+          </p>
           <p className='pt-2 leading-7 text-subtext'>{description}</p>
         </div>
         <div className='pt-4 mt-auto space-x-4'>
