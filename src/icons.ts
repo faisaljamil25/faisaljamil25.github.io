@@ -70,6 +70,10 @@ const sass = {
   path: '/icons/sass.svg',
   name: 'Sass',
 };
+const reactQuery = {
+  path: '/icons/react-query.svg',
+  name: 'React Query',
+};
 
 export default {
   html,
@@ -90,4 +94,5 @@ export default {
   solidity,
   ethereum,
   sass,
+  reactQuery,
 };

@@ -6,7 +6,7 @@ import SectionTitle from './SectionTitle';
 const Projects = () => {
   return (
     <section>
-      <SectionTitle subtitle='Here are some of my best works.'>
+      <SectionTitle subtitle='Here are some of my best works'>
         Projects
       </SectionTitle>
       <div className='grid grid-cols-1 gap-x-[140px] gap-y-20 pt-10 lg:grid-cols-2 '>

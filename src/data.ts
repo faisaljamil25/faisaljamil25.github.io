@@ -18,6 +18,15 @@ export const projects = [
   },
   {
     id: 3,
+    title: 'Megatreopuz',
+    description:
+      'Megatreopuz is secure, scalable and powerful cryptic hunt platform ',
+    imgSrc: '/mega1.png',
+    liveLink: 'https://github.com/ISTE-SC-MANIT/megatreopuz-ui',
+    repoLink: 'https://github.com/ISTE-SC-MANIT/megatreopuz-ui',
+  },
+  {
+    id: 4,
     title: 'Memories',
     description: 'Image sharing web app built with React and Express.js',
     imgSrc: '/memories.png',
@@ -25,7 +34,7 @@ export const projects = [
     repoLink: 'https://github.com/faisaljamil25/memories-client',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Ignite Games',
     description: 'Website to search video games information',
     imgSrc: '/ignite.png',
@@ -33,7 +42,7 @@ export const projects = [
     repoLink: 'https://github.com/faisaljamil25/ignite',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Waves Music Player',
     description: 'A music player built with React.js',
     imgSrc: '/music-player.png',

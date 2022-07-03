@@ -9,9 +9,7 @@ const Skills = () => {
   const { theme } = useTheme();
   return (
     <section>
-      <SectionTitle subtitle="Technologies I've worked on.">
-        Skills
-      </SectionTitle>
+      <SectionTitle subtitle="Technologies I've worked on">Skills</SectionTitle>
       <div className='px-6 2xl:px-0 w-full flex justify-center items-center py-10 md:py-14 '>
         <div className='mx-auto container'>
           <div>
@@ -30,6 +28,7 @@ const Skills = () => {
                 icons.css,
                 icons.sass,
                 icons.js,
+                icons.reactQuery,
                 icons.git,
                 icons.figma,
                 icons.postman,
