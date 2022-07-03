@@ -6,6 +6,7 @@ interface Props {
   imgSrc: string;
   title: string;
   description: string;
+  techStack: string;
   liveLink: string;
   repoLink: string;
 }
@@ -14,6 +15,7 @@ const ProjectCard: React.FC<Props> = ({
   imgSrc,
   title,
   description,
+  techStack,
   liveLink,
   repoLink,
 }: Props) => {
@@ -28,6 +30,7 @@ const ProjectCard: React.FC<Props> = ({
         />
         <div className='pt-8'>
           <h3 className='text-3xl font-medium dark:text-white'>{title}</h3>
+          <p className='pt-2 leading-7 text-md text-sky-300'>{techStack}</p>
           <p className='pt-2 leading-7 text-subtext'>{description}</p>
         </div>
         <div className='pt-4 mt-auto space-x-4'>
