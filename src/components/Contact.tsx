@@ -1,6 +1,4 @@
 import React, { RefObject } from 'react';
-import { FiGithub } from 'react-icons/fi';
-import { RiLinkedinLine } from 'react-icons/ri';
 import SectionTitle from './SectionTitle';
 
 const Contact: React.FC<{ contactRef: RefObject<HTMLElement> }> = ({

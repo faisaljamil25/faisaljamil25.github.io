@@ -6,7 +6,7 @@ import { useIsMounted } from '@/hooks/useIsMounted';
 import ThemeToggleButton from '@/components/ThemeToggleButton';
 
 const Navbar: React.FC = () => {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const isMounted = useIsMounted();
 
   return (
@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
         </div>
         <div>
           {isMounted &&
-            (resolvedTheme === 'light' ? (
+            (theme === 'light' ? (
               <ThemeToggleButton
                 onClick={() => setTheme('dark')}
                 aria-label='Dark mode toggle'
