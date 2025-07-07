@@ -60,8 +60,8 @@ const Landing: React.FC<{ scrollToContact: () => void }> = ({
             I like making cool stuff
           </h2>
           <p className='max-w-2xl md:text-xl sm:text-lg dark:text-white'>
-            I&apos;m a full stack web developer experienced in React, Nextjs,
-            Typescript, Nodejs and Express.
+            I&apos;m a Software Engineer at Atlassian, passionate about
+            building products that solve real-life problems.
           </p>
           <div>
             <button
