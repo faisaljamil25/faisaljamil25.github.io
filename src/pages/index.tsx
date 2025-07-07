@@ -1,30 +1,21 @@
-import type { NextPage } from 'next';
-import { RefObject, useRef } from 'react';
-import MainLayout from '../layouts/MainLayout';
-import Landing from '@/components/Landing';
-import Projects from '@/components/Projects';
-import SocialLinks from '@/components/SocialLinks';
-import Contact from '@/components/Contact';
+import Navigation from '@/components/Navigation';
+import Hero from '@/components/Hero';
+import Experience from '@/components/Experience';
 import Skills from '@/components/Skills';
-import About from '@/components/About';
+import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
 
-const scrollToRef = (ref: RefObject<HTMLElement>) => {
-  if (ref.current) window.scrollTo(0, ref.current.offsetTop);
-};
-
-const Home: NextPage = () => {
-  const contactRef = useRef<HTMLElement>(null);
-  const scrollToContact = () => scrollToRef(contactRef);
+const Index = () => {
   return (
-    <MainLayout>
-      <Landing scrollToContact={scrollToContact} />
-      <About />
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <Hero />
+      <Experience />
       <Skills />
       <Projects />
-      <SocialLinks />
-      <Contact contactRef={contactRef} />
-    </MainLayout>
+      <Contact />
+    </div>
   );
 };
 
-export default Home;
+export default Index;
