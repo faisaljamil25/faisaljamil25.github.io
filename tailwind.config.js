@@ -2,13 +2,12 @@ const colors = require('tailwindcss/colors');
 const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: [
+  content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/layouts/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class', // or 'media' or 'class'
-  mode: 'jit',
   theme: {
     extend: {
       fontFamily: {
@@ -72,11 +71,7 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [
     require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
   ],
 };

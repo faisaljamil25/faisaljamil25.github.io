@@ -1,11 +1,6 @@
 const debug = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  exportPathMap: function () {
-    return {
-      '/': { page: '/' },
-    };
-  },
   assetPrefix: !debug ? '' : '',
   webpack: (config, { dev }) => {
     config.module.rules = config.module.rules.map((rule) => {
@@ -17,7 +12,8 @@ module.exports = {
     return config;
   },
   images: {
-    loader: 'akamai',
-    path: '',
+    unoptimized: true,
   },
+  output: 'export',
+  trailingSlash: true,
 };
