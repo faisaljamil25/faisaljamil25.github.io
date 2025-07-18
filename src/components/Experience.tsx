@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 const experiences = [
   {
     title: "Founding Engineer",
-    company: "Food Venture",
+    company: "Biryani By Flame",
     period: "Jan 2024 - Present",
     description: "Building something exciting in the food tech space. Leading the development of a platform that connects food enthusiasts with local culinary experiences.",
     technologies: ["Flutter", "Dart", "Supabase", "Firebase Cloud Messaging"]
@@ -26,7 +26,7 @@ const experiences = [
   {
     title: "Head Web Developer",
     company: "ISTE MANIT",
-    period: "April 2021 - Aug 2022",
+    period: "Jun 2021 - Jun 2022",
     description:"Built a powerful online quizzing application that supported 1000+ participants, delivering a real-time, interactive, and scalable platform.",
     technologies: ["Next.js", "Node.js", "Express", "TypeScript", "MongoDB", "Firebase"]
   }
