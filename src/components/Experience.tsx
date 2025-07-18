@@ -3,6 +3,13 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const experiences = [
   {
+    title: "Founding Engineer",
+    company: "Food Venture",
+    period: "Jan 2024 - Present",
+    description: "Building something exciting in the food tech space. Leading the development of a platform that connects food enthusiasts with local culinary experiences.",
+    technologies: ["Flutter", "Dart", "Supabase", "Firebase Cloud Messaging"]
+  },
+  {
     title: "Software Engineer",
     company: "Atlassian",
     period: "July 2023 - Dec 2024",

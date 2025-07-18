@@ -54,7 +54,7 @@ const Navigation = () => {
               </motion.button>
             ))}
             
-            <motion.a
+            {/* <motion.a
               href="https://drive.google.com/file/d/1lkUm_l1_3i3jTp9q2o-Qiovi4TN10nEf/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
@@ -65,7 +65,7 @@ const Navigation = () => {
             >
               <FileText className="w-4 h-4" />
               <span>Resume</span>
-            </motion.a>
+            </motion.a> */}
 
             <motion.button
               initial={{ opacity: 0, y: -20 }}
@@ -123,7 +123,7 @@ const Navigation = () => {
                   </motion.button>
                 ))}
                 
-                <motion.a
+                {/* <motion.a
                   href="https://drive.google.com/file/d/1lkUm_l1_3i3jTp9q2o-Qiovi4TN10nEf/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -135,7 +135,7 @@ const Navigation = () => {
                 >
                   <FileText className="w-4 h-4" />
                   <span>Resume</span>
-                </motion.a>
+                </motion.a> */}
               </div>
             </div>
           </motion.div>
